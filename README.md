@@ -1,56 +1,51 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To Do List
 
-> Description the project.
-
+> "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JavaScript (ES6)
+- Webpack
 
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
 
-
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+You can directly clone this repo and run the following.
 
 ### Prerequisites
 
+- Node.js
+- npm
+
 ### Setup
 
-### Install
+Once you clone the repo, go to the directory and run `npm install` command to get all necessary instalations.
 
-### Usage
+## Joy Kwamboka
 
-### Run tests
+- Github: [@kwambiee](https://github.com/kwambiee)
+- Twitter: [@kwambiee](https://twitter.com/kwambiee)
+- Linkedin: [Joy Kwamboka](https://www.linkedin.com/in/joy-kwamboka)
+- E-mail: kwambokaj2.jk@gmail.com
 
-### Deployment
+## 🤝 Contributing
 
+Contributions, issues and feature requests are welcome!
 
+## Show your support
 
-## Authors
+Give a ⭐️ if you like this project!
 
-👤 **Author1**
+## 📝 License
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+This project is [MIT](./LICENSE) licensed.
 
 ## 🤝 Contributing
 

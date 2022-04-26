@@ -1,16 +1,17 @@
 // css files here
-import "./style.css";
+import './style.css';
+
 const tasks = [
-  { description: "Mop the house", completed: true, index: 1 },
-  { description: "Clean utensils", completed: false, index: 2 },
-  { description: "Read a book", completed: false, index: 3 },
-  { description: "Prepare Breakfast", completed: true, index: 4 },
+  { description: 'Mop the house', completed: true, index: 1 },
+  { description: 'Clean utensils', completed: false, index: 2 },
+  { description: 'Read a book', completed: false, index: 3 },
+  { description: 'Prepare Breakfast', completed: true, index: 4 },
 ];
 
-const toDos = document.getElementById("todo-list");
+const toDos = document.getElementById('todo-list');
 
 function Showtasks() {
-  let chores = "";
+  let chores = '';
   tasks.forEach((element) => {
     chores += `
             <div class="list">
