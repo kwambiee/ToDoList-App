@@ -9,7 +9,7 @@ class ToDoList {
   }
 
   showTaskItem(element) {
-    return `<div class="list">
+    return `<div class="list show">
                 <input type="checkbox" name="check">
                 <p class="taskdescription">${element.description}</p>
                 <a><i class="fa fa-ellipsis-v fa-2x menu-icon" aria-label ="${element.index}" ></i>
@@ -17,10 +17,10 @@ class ToDoList {
             </div>`;
   }
   editTaskItem(element) {
-    return `<div class="list">
+    return `<div class="list edit">
                 <input type="checkbox" name="check">
                 <input type="text" value="${element.description}">
-                <a id="menu-icon" ><i class="fa fa-trash-O fa-2x" aria-hidden="true"></i>
+                <a id="menu-icon" ><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i>
                 </a>
             </div>`;
   }
@@ -84,9 +84,9 @@ const taskDescription = document.querySelector(".taskdescription");
 const addList = document.querySelector("input[name=addtext]");
 const menuIcon = document.querySelectorAll(".menu-icon");
 
-checkbox.addEventListener("change", () => {
-  taskDescription.style.textDecoration = "line-through";
-});
+// checkbox.addEventListener("change", () => {
+//   taskDescription.style.textDecoration = "line-through";
+// });
 
 addList.addEventListener("keydown", (e) => {
   if (e.code === "Enter") {
@@ -103,6 +103,7 @@ menuIcon.forEach((menu) => {
     const task = newTask.listArray.find(
       (item) => parseInt(item.index) === parseInt(e.target.ariaLabel)
     );
+    console.log(task);
     task.edit = true;
     newTask.showTasks();
   });
