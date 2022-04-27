@@ -8,24 +8,24 @@ class ToDoList {
     this.listArray = JSON.parse(localStorage.getItem("toDoList")) || [];
   }
 
-  // showTaskItem(element) {
-  //   return `<div class="list">
-  //               <input type="checkbox" name="check">
-  //               <p class="taskdescription">${element.description}</p>
-  //               <a><i class="fa fa-ellipsis-v fa-2x" aria-hidden="true" aria-label="${element.index}" id="menu-icon"></i>
-  //               </a>
-  //           </div>`;
-  // }
-  // editTaskItem(element) {
-  //   return `<div class="list">
-  //               <input type="checkbox" name="check">
-  //               <input type="text" value="${element.description}">
-  //               <a id="menu-icon" ><i class="fa fa-trash-O fa-2x" aria-hidden="true" onclick="${this.editTask(
-  //                 element.index
-  //               )}"></i>
-  //               </a>
-  //           </div>`;
-  // }
+  showTaskItem(element) {
+    return `<div class="list">
+                <input type="checkbox" name="check">
+                <p class="taskdescription">${element.description}</p>
+                <a><i class="fa fa-ellipsis-v fa-2x" aria-hidden="true" aria-label="${element.index}" id="menu-icon"></i>
+                </a>
+            </div>`;
+  }
+  editTaskItem(element) {
+    return `<div class="list">
+                <input type="checkbox" name="check">
+                <input type="text" value="${element.description}">
+                <a id="menu-icon" ><i class="fa fa-trash-O fa-2x" aria-hidden="true" onclick="${this.editTask(
+                  element.index
+                )}"></i>
+                </a>
+            </div>`;
+  }
 
   //show tasks
   showTasks() {
@@ -79,29 +79,29 @@ class ToDoList {
   }
 }
 
-// const newTask = new ToDoList();
-// newTask.showTasks();
-// const checkbox = document.querySelector("input[name=check]");
-// const taskDescription = document.querySelector(".taskdescription");
-// const addList = document.querySelector("input[name=addtext]");
-// const menuIcon = document.getElementById("menu-icon");
+const newTask = new ToDoList();
+newTask.showTasks();
+const checkbox = document.querySelector("input[name=check]");
+const taskDescription = document.querySelector(".taskdescription");
+const addList = document.querySelector("input[name=addtext]");
+const menuIcon = document.getElementById("menu-icon");
 
-// // checkbox.addEventListener("change", () => {
-// //   taskDescription.style.textDecoration = "line-through";
-// // });
+checkbox.addEventListener("change", () => {
+  taskDescription.style.textDecoration = "line-through";
+});
 
-// addList.addEventListener("keydown", (e) => {
-//   if (e.code === "Enter") {
-//     if (addList.value) {
-//       newTask.addTask(addList.value);
-//       newTask.showTasks;
-//       addList.value = "";
-//     }
-//   }
-// });
+addList.addEventListener("keydown", (e) => {
+  if (e.code === "Enter") {
+    if (addList.value) {
+      newTask.addTask(addList.value);
+      newTask.showTasks;
+      addList.value = "";
+    }
+  }
+});
 
-// menuIcon.addEventListener("click", (e) => {
-//   console.log(e.target.ariaLabel);
-// });
+menuIcon.addEventListener("click", (e) => {
+  console.log(e.target.ariaLabel);
+});
 
 window.onload();
