@@ -12,7 +12,7 @@ class ToDoList {
     return `<div class="list">
                 <input type="checkbox" name="check">
                 <p class="taskdescription">${element.description}</p>
-                <a><i class="fa fa-ellipsis-v fa-2x" aria-hidden="true" aria-label="${element.index}" id="menu-icon"></i>
+                <a><i class="fa fa-ellipsis-v fa-2x menu-icon" aria-label ="${element.index}" ></i>
                 </a>
             </div>`;
   }
@@ -20,9 +20,7 @@ class ToDoList {
     return `<div class="list">
                 <input type="checkbox" name="check">
                 <input type="text" value="${element.description}">
-                <a id="menu-icon" ><i class="fa fa-trash-O fa-2x" aria-hidden="true" onclick="${this.editTask(
-                  element.index
-                )}"></i>
+                <a id="menu-icon" ><i class="fa fa-trash-O fa-2x" aria-hidden="true"></i>
                 </a>
             </div>`;
   }
@@ -84,7 +82,7 @@ newTask.showTasks();
 const checkbox = document.querySelector("input[name=check]");
 const taskDescription = document.querySelector(".taskdescription");
 const addList = document.querySelector("input[name=addtext]");
-const menuIcon = document.getElementById("menu-icon");
+const menuIcon = document.querySelectorAll(".menu-icon");
 
 checkbox.addEventListener("change", () => {
   taskDescription.style.textDecoration = "line-through";
@@ -100,8 +98,14 @@ addList.addEventListener("keydown", (e) => {
   }
 });
 
-menuIcon.addEventListener("click", (e) => {
-  console.log(e.target.ariaLabel);
+menuIcon.forEach((menu) => {
+  menu.addEventListener("click", (e) => {
+    const task = newTask.listArray.find(
+      (item) => parseInt(item.index) === parseInt(e.target.ariaLabel)
+    );
+    task.edit = true;
+    newTask.showTasks();
+  });
 });
 
 window.onload();
