@@ -71,14 +71,13 @@ class ToDoList {
     this.showTasks();
   }
 
-//   //Edit a task
-//   editTask(index, description) {
-//     this.listArray[index - 1].description = description;
-//     localStorage.setItem("toDoList", JSON.stringify(this.listArray));
-//     this.showTasks();
-//   }
-//   //
-// }
+  //Edit a task
+  editTask(index, description) {
+    this.listArray[index - 1].description = description;
+    localStorage.setItem("toDoList", JSON.stringify(this.listArray));
+    this.showTasks();
+  }
+}
 
 // const newTask = new ToDoList();
 // newTask.showTasks();
