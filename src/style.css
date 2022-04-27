@@ -19,10 +19,9 @@ html {
   margin: 0;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(220, 220, 220, 1);
+  border: 2px solid rgba(220, 220, 220, 1);
   padding: 0 1rem;
 }
-
 
 #icon {
   color: gray;
@@ -40,17 +39,20 @@ html {
   align-items: baseline;
   border-bottom: 1px solid rgba(220, 220, 220, 1);
   border-top: 1px solid rgba(220, 220, 220, 1);
-  padding: 0 1rem;
+  padding: 1rem 1rem;
 }
 
 .list p {
   margin-left: 1rem;
 }
 
-
 a {
   margin-left: auto;
   color: gray;
+}
+
+.hide {
+  display: none;
 }
 
 .button {
@@ -61,6 +63,7 @@ a {
   border-bottom: 1px solid rgba(220, 220, 220, 1);
   background-color: rgb(238, 238, 238);
 }
+
 button {
   border: none;
   color: gray;
