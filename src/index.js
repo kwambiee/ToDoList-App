@@ -60,16 +60,16 @@ class ToDoList {
     this.showTasks();
   }
 
-//   //remove a task
-//   removeTask(index) {
-//     this.listArray = this.listArray.filter((l) => l.id !== index);
-//     this.listArray = this.listArray.map((list, i) => {
-//       list.index = i + 1;
-//       return list;
-//     });
-//     localStorage.setItem("toDoList", JSON.stringify(this.listArray));
-//     this.showTasks();
-//   }
+  //remove a task
+  removeTask(index) {
+    this.listArray = this.listArray.filter((l) => l.id !== index);
+    this.listArray = this.listArray.map((list, i) => {
+      list.index = i + 1;
+      return list;
+    });
+    localStorage.setItem("toDoList", JSON.stringify(this.listArray));
+    this.showTasks();
+  }
 
 //   //Edit a task
 //   editTask(index, description) {
