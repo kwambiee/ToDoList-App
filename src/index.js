@@ -92,9 +92,11 @@ addList.addEventListener("keydown", (e) => {
   if (e.code === "Enter") {
     if (addList.value) {
       newTask.addTask(addList.value);
-      newTask.showTasks;
+      // newTask.showTasks;
       addList.value = "";
     }
+  } else {
+    console.log("done");
   }
 });
 
@@ -103,8 +105,8 @@ menuIcon.forEach((menu) => {
     const task = newTask.listArray.find(
       (item) => parseInt(item.index) === parseInt(e.target.ariaLabel)
     );
-    console.log(task);
     task.edit = true;
+    localStorage.setItem("toDoList", JSON.stringify(newTask.listArray));
     newTask.showTasks();
   });
 });
