@@ -73,12 +73,14 @@ button {
 .edit {
   background-color: rgba(255, 235, 205);
 }
+
 .edit input {
   border: none;
   background-color: rgba(255, 235, 205);
   font-size: 1rem;
   margin-left: 1rem;
 }
+
 input:focus {
   outline: none;
 }
