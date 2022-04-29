@@ -46,7 +46,7 @@ html {
   margin-left: 1rem;
 }
 
-a {
+i {
   margin-left: auto;
   color: gray;
 }
@@ -68,6 +68,7 @@ button {
   border: none;
   color: gray;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .edit {
@@ -83,4 +84,8 @@ button {
 
 input:focus {
   outline: none;
+}
+
+.strike {
+  text-decoration: line-through;
 }
