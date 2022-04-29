@@ -4,16 +4,16 @@ class ToDoList {
   }
 
   updateTasks() {
-    localStorage.setItem('toDoList', JSON.stringify(this.listArray));
+    localStorage.setItem("toDoList", JSON.stringify(this.listArray));
   }
 
   getTasks() {
-    this.listArray = JSON.parse(localStorage.getItem('toDoList')) || [];
+    this.listArray = JSON.parse(localStorage.getItem("toDoList")) || [];
   }
 
   setEdit(i) {
     const task = this.listArray.find(
-      (item) => Number(item.index) === Number(i),
+      (item) => Number(item.index) === Number(i)
     );
     task.edit = true;
     this.updateTasks();
@@ -28,18 +28,6 @@ class ToDoList {
       edit: false,
     };
     this.listArray = [...this.listArray, task];
-    this.updateTasks();
-  }
-
-  // remove a task
-  clearCompleted() {
-    this.listArray = this.listArray.filter((item) => item.completed !== true);
-    if (this.listArray.length > 0) {
-      this.listArray = this.listArray.map((list, i) => {
-        list.index = i + 1;
-        return list;
-      });
-    }
     this.updateTasks();
   }
 
@@ -59,7 +47,6 @@ class ToDoList {
     this.listArray[index - 1].edit = false;
     this.updateTasks();
   }
-
   changeComplete(i) {
     const status = this.listArray[i - 1].completed;
     this.listArray[i - 1] = {
