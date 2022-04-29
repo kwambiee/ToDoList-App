@@ -31,6 +31,17 @@ class ToDoList {
     this.updateTasks();
   }
 
+  clearCompleted() {
+    this.listArray = this.listArray.filter((item) => item.completed !== true);
+    if (this.listArray.length > 0) {
+      this.listArray = this.listArray.map((list, i) => {
+        list.index = i + 1;
+        return list;
+      });
+    }
+    this.updateTasks();
+  }
+
   // remove a task
   removeTask(index) {
     this.listArray = this.listArray.filter((item) => item.index !== index);
