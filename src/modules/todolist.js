@@ -4,27 +4,22 @@ class ToDoList {
   }
 
   updateTasks() {
-    localStorage.setItem("toDoList", JSON.stringify(this.listArray));
+    localStorage.setItem('toDoList', JSON.stringify(this.listArray));
   }
 
   getTasks() {
-    this.listArray = JSON.parse(localStorage.getItem("toDoList")) || [];
-  }
-
-  //show tasks
-  showTasks() {
-    return JSON.parse(localStorage.getItem("toDoList")) || [];
+    this.listArray = JSON.parse(localStorage.getItem('toDoList')) || [];
   }
 
   setEdit(i) {
     const task = this.listArray.find(
-      (item) => parseInt(item.index) === parseInt(i)
+      (item) => Number(item.index) === Number(i),
     );
     task.edit = true;
     this.updateTasks();
   }
 
-  //add a task
+  // add a task
   addTask(description) {
     const task = {
       description,
@@ -36,7 +31,7 @@ class ToDoList {
     this.updateTasks();
   }
 
-  //remove a task
+  // remove a task
   clearCompleted() {
     this.listArray = this.listArray.filter((item) => item.completed !== true);
     if (this.listArray.length > 0) {
@@ -47,7 +42,8 @@ class ToDoList {
     }
     this.updateTasks();
   }
-  //remove a task
+
+  // remove a task
   removeTask(index) {
     this.listArray = this.listArray.filter((item) => item.index !== index);
     this.listArray = this.listArray.map((list, i) => {
@@ -57,7 +53,7 @@ class ToDoList {
     this.updateTasks();
   }
 
-  //Edit a task
+  // Edit a task
   editTask(index, description) {
     this.listArray[index - 1].description = description;
     this.listArray[index - 1].edit = false;
@@ -65,7 +61,7 @@ class ToDoList {
   }
 
   changeComplete(i) {
-    let status = this.listArray[i - 1].completed;
+    const status = this.listArray[i - 1].completed;
     this.listArray[i - 1] = {
       ...this.listArray[i - 1],
       completed: !status,
