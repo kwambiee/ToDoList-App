@@ -11,22 +11,40 @@
 - JavaScript (ES6)
 - Webpack
 
+## Requirements
+
+- No linter Errors
+- Correct Github Flow
+- Best Practices for HTML, CSS and Javascript
+
+## Project Requirements
+
+- Use webpack to bundle JavaScript.
+- Use proper ES6 syntax.
+- Use ES6 modules.
+- Implement a function for adding a new task.
+- Implement a function for deleting a task.
+- Set new task `completed`property to `false`.
+- Implement functions that will `filter`,`updateTasks`and check for `status`.
+- Save the list to Local Storage.
+
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
 
 ## Getting Started
 
-You can directly clone this repo and run the following.
+You can directly clone this repo `git clone ['']` and run the with applicable `code-editor`.
 
 ### Prerequisites
 
 - Node.js
 - npm
+- git
 
 ### Setup
 
-Once you clone the repo, go to the directory and run `npm install` command to get all necessary instalations.
+Once you clone the repo, go to the directory and run `npm install` command to get all necessary installations.
 
 ## Joy Kwamboka
 
