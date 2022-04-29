@@ -5,8 +5,49 @@ import * as Element from "./modules/elements.js";
 
 const newTask = new TodoList();
 
+const getCheck = (element) => {
+  return ` ${
+    element.completed
+      ? `<input type="checkbox" aria-label="${element.index}" data-name="status" name="check" checked>`
+      : `<input type="checkbox" aria-label="${element.index}" data-name="status" name="check">`
+  } `;
+};
+
+const showTaskItem = (element) => {
+  return `<div class="list show">
+                ${getCheck(element)}                
+                <p class="taskdescription ${
+                  element.completed ? "strike" : ""
+                }">${element.description}</p>
+               <i class="fa fa-ellipsis-v fa-2x menu-icon" aria-label="${
+                 element.index
+               }"  data-name="edit"></i>
+          </div>`;
+};
+
+const editDescription = (element) => {
+  return `<div class="list edit">
+                 ${getCheck(element)} 
+                <input type="text" class="desc" value="${
+                  element.description
+                }" aria-label ="${element.index}" >
+                <i class="fa fa-trash-o fa-2x" aria-label="${
+                  element.index
+                }"  data-name="delete"></i>
+          </div>`;
+};
+
 const refresh = () => {
-  Element.listBody.innerHTML = newTask.showTasks();
+  const list = newTask.listArray;
+  let content = "";
+  if (list) {
+    list.forEach((element) => {
+      content += `${
+        element.edit ? editDescription(element) : showTaskItem(element)
+      }`;
+    });
+  }
+  Element.listBody.innerHTML = content;
 };
 refresh();
 
@@ -22,9 +63,36 @@ Element.addList.addEventListener("keydown", (e) => {
   }
 });
 
-window.document.querySelectorAll(".menu-icon").forEach((menu) => {
-  menu.addEventListener("click", (e) => {
-    newTask.setEdit(e.target.ariaLabel);
-    window.location.reload();
-  });
+Element.listBody.addEventListener("click", (e) => {
+  if (e.target.nodeName === "I") {
+    if (e.target.dataset.name === "edit") {
+      newTask.setEdit(e.target.ariaLabel);
+      refresh();
+    } else if (e.target.dataset.name === "delete") {
+      newTask.removeTask(parseInt(e.target.ariaLabel));
+      refresh();
+    }
+  }
+});
+
+Element.listBody.addEventListener("keydown", (e) => {
+  if (e.code === "Enter") {
+    if (e.target.value) {
+      let id = parseInt(e.target.ariaLabel);
+      newTask.editTask(id, e.target.value);
+      refresh();
+    }
+  }
+});
+
+Element.listBody.addEventListener("change", (e) => {
+  if (e.target.dataset.name === "status") {
+    newTask.changeComplete(parseInt(e.target.ariaLabel));
+    refresh();
+  }
+});
+
+Element.clear.addEventListener("click", () => {
+  newTask.clearCompleted();
+  refresh();
 });
