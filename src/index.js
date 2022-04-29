@@ -85,8 +85,3 @@ Element.listBody.addEventListener('change', (e) => {
     refresh();
   }
 });
-
-Element.clear.addEventListener('click', () => {
-  newTask.clearCompleted();
-  refresh();
-});

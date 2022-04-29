@@ -31,7 +31,6 @@ class ToDoList {
     this.updateTasks();
   }
 
-  // remove a task
   clearCompleted() {
     this.listArray = this.listArray.filter((item) => item.completed !== true);
     if (this.listArray.length > 0) {
