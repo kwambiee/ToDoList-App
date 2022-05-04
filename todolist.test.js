@@ -29,31 +29,3 @@ describe('Add and delete Function', () => {
     );
   });
 });
-
-// [
-//   {
-//     description: 'grocery shopping',
-//     completed: false,
-//     index: task.listArray.length + 1,
-//     edit: false,
-//   },
-// ];
-
-// test('Add a task', () => {
-//   expect(addTask('grocery shopping')).toBe('grocery shopping');
-// });
-
-// test('Add a task', () => {
-//   task = [
-//     {
-//       description: 'grocery shopping',
-//       completed: false,
-//       index: task.listArray.length + 1,
-//       edit: false,
-//     },
-//   ];
-//   const response = { data: task };
-//   TodoList.addTask.mockResolvedValue(response);
-
-//   return TodoList.addTask().then((data) => expect(data).toEqual(task));
-// });

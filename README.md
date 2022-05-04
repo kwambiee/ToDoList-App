@@ -28,9 +28,9 @@
 - Implement functions that will `filter`,`updateTasks`and check for `status`.
 - Save the list to Local Storage.
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://kwambiee.github.io/ToDoList-App/)
 
 ## Getting Started
 
