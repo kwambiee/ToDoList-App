@@ -1,4 +1,5 @@
-import ToDoList from './src/modules/todolist';
+import ToDoList from './src/modules/todolist.js';
+
 jest.mock('./src/modules/todolist');
 
 beforeEach(() => {
@@ -17,21 +18,21 @@ describe('Edit, status and delete All items', () => {
   test('edit item', () => {
     task.editTask(1, 'edited task');
     expect(global.localStorage.getItem('toDoList')).toEqual(
-      JSON.stringify(task.listArray)
+      JSON.stringify(task.listArray),
     );
   });
 
   test('status of item', () => {
     task.changeComplete(1);
     expect(global.localStorage.getItem('toDoList')).toEqual(
-      JSON.stringify(task.listArray)
+      JSON.stringify(task.listArray),
     );
   });
 
   test('clear all completed', () => {
     task.clearCompleted();
     expect(global.localStorage.getItem('toDoList')).toEqual(
-      JSON.stringify(task.listArray)
+      JSON.stringify(task.listArray),
     );
   });
 });
