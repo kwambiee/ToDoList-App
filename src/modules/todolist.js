@@ -13,7 +13,7 @@ class ToDoList {
 
   setEdit(i) {
     const task = this.listArray.find(
-      (item) => Number(item.index) === Number(i),
+      (item) => Number(item.index) === Number(i)
     );
     task.edit = true;
     this.updateTasks();
