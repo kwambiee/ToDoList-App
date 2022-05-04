@@ -1,4 +1,5 @@
-import ToDoList from './src/modules/todolist';
+import ToDoList from './src/modules/todolist.js';
+
 jest.mock('./src/modules/todolist');
 
 beforeEach(() => {
@@ -17,14 +18,14 @@ describe('Add and delete Function', () => {
   test('add item', () => {
     task.addTask('July');
     expect(global.localStorage.getItem('toDoList')).toEqual(
-      JSON.stringify(task.listArray)
+      JSON.stringify(task.listArray),
     );
   });
 
   test('delete item', () => {
     task.removeTask(1);
     expect(global.localStorage.getItem('toDoList')).toEqual(
-      JSON.stringify(task.listArray)
+      JSON.stringify(task.listArray),
     );
   });
 });
