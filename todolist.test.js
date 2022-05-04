@@ -1,4 +1,4 @@
-import ToDoList from './src/modules/todolist';
+import ToDoList from './src/modules/todolist.js';
 jest.mock('./src/modules/todolist');
 
 beforeEach(() => {
