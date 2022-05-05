@@ -10,6 +10,7 @@
 - CSS
 - JavaScript (ES6)
 - Webpack
+- Jest
 
 ## Requirements
 
@@ -19,6 +20,7 @@
 
 ## Project Requirements
 
+- Use jest framework for testing
 - Use webpack to bundle JavaScript.
 - Use proper ES6 syntax.
 - Use ES6 modules.
@@ -44,7 +46,10 @@ You can directly clone this repo `git clone ['']` and run the with applicable `c
 
 ### Setup
 
-Once you clone the repo, go to the directory and run `npm install` command to get all necessary installations.
+- Once you clone the repo, go to the directory and run `npm install` command to get all necessary installations.
+- You can run the project locally by running <b> index.html</b> in your browser. 
+- You can test the application by writing `npm test` at your command line.
+
 
 ## Joy Kwamboka
 
@@ -52,6 +57,13 @@ Once you clone the repo, go to the directory and run `npm install` command to ge
 - Twitter: [@kwambiee](https://twitter.com/kwambiee)
 - Linkedin: [Joy Kwamboka](https://www.linkedin.com/in/joy-kwamboka)
 - E-mail: kwambokaj2.jk@gmail.com
+
+## Eric Mahare
+
+- Github: [@ericmahare](https://github.com/ericmahare)
+- Twitter: [@ericmahare](https://twitter.com/ericmahare)
+- Linkedin: [Eric Mahare](https://www.linkedin.com/in/eric-mahare)
+- E-mail: erikmahare@gmail.com
 
 ## 🤝 Contributing
 
